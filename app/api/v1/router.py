@@ -6,10 +6,11 @@ route -> service -> repository layering.
 
 from fastapi import APIRouter
 
-from app.api.v1.endpoints import health, job_sources, jobs
+from app.api.v1.endpoints import admin_sync, health, job_sources, jobs
 
 
 api_router = APIRouter()
 api_router.include_router(health.router)
 api_router.include_router(jobs.router)
 api_router.include_router(job_sources.router)
+api_router.include_router(admin_sync.router)

@@ -16,7 +16,7 @@ class SyncRun(Base):
         nullable=False,
     )
 
-    status: Mapped[str] = mapped_column(String(50), nullable=False, default="started")
+    status: Mapped[str] = mapped_column(String(50), nullable=False, default="running")
 
     started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
     finished_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
